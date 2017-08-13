@@ -12,7 +12,7 @@ void Map::create(char* texture)
 	texture_map.setSmooth(true);
 	sprite_map.setTexture(texture_map);
 
-	if (!macarte.load("./carte.tmx")) {
+	/*if (!macarte.load("./carte.tmx")) {
 		printf("ca marche pas!\n");
 	}
 
@@ -26,16 +26,16 @@ void Map::create(char* texture)
 	MapLayer layerSix(macarte, 6);
 	MapLayer layerSeven(macarte, 7);
 	MapLayer layerEight(macarte, 8);
-	MapLayer layerNine(macarte, 9);
+	MapLayer layerNine(macarte, 9);*/
 
 
 }
 
-void Map::draw(sf::RenderWindow& window)
+/*void Map::draw(sf::RenderWindow& window)
 {
 	
 	//Drawing of the map on the window
-	window.draw(layerZero);
+	/*window.draw(layerZero);
 	window.draw(layerOne);
 	window.draw(layerTwo);
 
@@ -50,9 +50,9 @@ void Map::draw(sf::RenderWindow& window)
 		animation = true;
 	}*/
 
-	window.draw(layerfour);
-	window.draw(layerFive);
+	/*window.draw(layerfour);
+	window.draw(layerFive);*/
 
 	//mapMenu.create("menu_birdtown.png");
 
-}
+//}
