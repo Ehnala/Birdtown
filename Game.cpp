@@ -2,7 +2,7 @@
 #include "Game.h"
 #include "MainMenu.h"
 #include "SplashScreen.h"
-//#include "Map.h"
+#include "Map.h"
 
 void Game::Start(void)
 {
@@ -72,9 +72,6 @@ void Game::GameLoop()
 	{
 		_mainWindow.clear(sf::Color(0, 0, 0));
 
-		//Map management
-		//TODO
-
 		//If the main window is closed, stop the game
 		if (event.type == sf::Event::Closed)
 		{
@@ -86,6 +83,13 @@ void Game::GameLoop()
 		{
 			ShowMenu();
 		}
+
+		//Map management
+		//TODO
+
+		Map carte;
+		carte.create("map.png");
+		_mainWindow.draw(carte.sprite_map);
 
 
 		_gameObjectManager.UpdateAll();
